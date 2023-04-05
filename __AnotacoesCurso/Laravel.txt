@@ -1,0 +1,70 @@
+GitHub Pessoal
+	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
+	
+Playlist
+https://www.youtube.com/watch?v=AN-LZuw2GIc&list=PLVSNL1PHDWvQ1N6fqhQ5HQzFtN-xrkjNU
+
+
+
+#01 - Ecossistema Laravel
+Varias ferramentas
+	autenticação, email, deploy, seguranca
+Documentação (https://laravel.com/docs/10.x)
+
+#02 - Instalação
+https://github.com/especializati/setup-docker-laravel/tree/laravel-10-com-php-8.1
+Instalar docker-compose
+	sudo apt install docker-compose
+Utilizando docker
+git clone -b laravel-10-com-php-8.1 https://github.com/especializati/setup-docker-laravel.git <nome_aplicação>
+cd <nome_aplicacao>
+docker-compose up -d
+Rodar um bash dentro do container da aplicação
+	docker-compose exec app bash
+	Instalar as dependencias do laravel
+		composer install
+	Gerar a KEY do nosso projeto
+		php artisan key:generate
+Para acessar a aplicação >> http://localhost:8989/   (Porta que esta configurada no docker-compose.yml  nginx)
+Remover os arquivos git do projeto (rm -rf .git)
+
+#03 - Versionar o projeto no GIT
+Iniciar o repositorio no GIT
+	git init
+	git add .
+	git commit -m "First Commit"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
