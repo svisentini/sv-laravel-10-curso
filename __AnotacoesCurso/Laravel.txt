@@ -34,7 +34,40 @@ Iniciar o repositorio no GIT
 	git init
 	git add .
 	git commit -m "First Commit"
+	cria o repositorio no git e roda os comandos para subir as alterações
 
+#04 - Entendendo a estrutura do framework
+
+#05 - Ferramentas para trabalhar com Laravel
+	Documentação >> https://laravel.com/docs/10.x
+	Docker
+	VSCode (Extensões)
+		Laravel Blade Snippets
+		PHP Intelephense
+		Docker
+		Docker Explorer
+
+#06 - Primeiro Codigo com Laravel
+	routes/web.php    >> rotas do sistema
+	resources/views   >> paginas do sistema
+	app/http/controller >> controlers
+
+#07 - UI da Aplicação
+	Dentro do container app >> docker-compose exec app bash
+	Comando para criar um controller
+	php artisan make:controller Admin\\SupportController
+	Model >> Utilizado para recuperar informações do banco
+	Configurações de conexao com o banco
+	.env
+	config/database.php
+
+#08 - Migrations no Laravel 10
+	database/migrations
+	banco de dados : localhost porta : 3388
+	criar uma migration
+	dentro do container app >> docker-compose exec app bash
+	php artisan migrate
+	create database laravel; (caso nao exista o banco de dados criado)
 
 
 
