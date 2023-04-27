@@ -5,6 +5,7 @@ Playlist
 https://www.youtube.com/watch?v=AN-LZuw2GIc&list=PLVSNL1PHDWvQ1N6fqhQ5HQzFtN-xrkjNU
 
 
+----------------------------------------------
 
 #01 - Ecossistema Laravel
 Varias ferramentas
