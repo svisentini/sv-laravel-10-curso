@@ -66,16 +66,20 @@ Iniciar o repositorio no GIT
 	banco de dados : localhost porta : 3388
 	criar uma migration
 	dentro do container app >> docker-compose exec app bash
-	php artisan migrate
+	php artisan migrate  >> Roda os arquivos de migrations >> Tabela migrations controla quais arquivos já rodaram na base.
 	create database laravel; (caso nao exista o banco de dados criado)
 
-
-
-
-
-
-
-
+#09 - Models no Laravel 10
+	"Entidades" >> São os Models 
+	Eloquent >> Abstrai os comandos de banco >> parecido com o jpa
+	Model esta relacionado a uma tabela do banco
+	Nome da classe no singular representa uma tabela com o mesmo nome, mas no plural, no banco de dados.
+	ou
+	definir dentro da classe >> protected $table = 'users';
+	Para criar um model:
+		php artisan make:model Support
+		php artisan make:model Support -m      >> cria o model e o arquivo de migration
+		php artisan make:model Support -mc     >> cria o model, o arquivo de migration e o controller
 
 
 
