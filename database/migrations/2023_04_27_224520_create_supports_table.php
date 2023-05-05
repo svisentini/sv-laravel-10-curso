@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('supports', function (Blueprint $table) {
             $table->id();
-            $table->string('subject');
+
+            $table->string('subject');   // 255
             $table->enum('status', ['a','p','c']);
-            $table->text('body');
-            $table->timestamps();
+            $table->text('body');   // text possui tamannho bem grande
+
+            $table->timestamps();   // campos created_at e updated_at
         });
     }
 

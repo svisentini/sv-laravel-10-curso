@@ -83,8 +83,14 @@ Iniciar o repositorio no GIT
 		php artisan make:model Support
 		php artisan make:model Support -m      >> cria o model e o arquivo de migration
 		php artisan make:model Support -mc     >> cria o model, o arquivo de migration e o controller
+	php artisan migrate >> Para rodar os arquivos de migrations
 
-
+#10 - Formulários e Seguranca (CSRF)
+	Cadastro de supports
+	1 - rota
+	2 - fazer a function create no controller
+	3 - criação da view
+	
 
 
 
