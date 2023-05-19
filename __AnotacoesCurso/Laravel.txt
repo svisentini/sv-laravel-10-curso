@@ -85,16 +85,28 @@ Iniciar o repositorio no GIT
 		php artisan make:model Support -mc     >> cria o model, o arquivo de migration e o controller
 	php artisan migrate >> Para rodar os arquivos de migrations
 
-#10 - Formulários e Seguranca (CSRF)
+#10 - Listagem dos dados com Blade
+	Não usar <?php dentro de um arquivo blade.php (ERRADO !!!)
+	Usar as diretivas, por exemplo "@foreach"
+
+#11 - Formulários e Seguranca (CSRF)
 	Cadastro de supports
 	1 - rota
 	2 - fazer a function create no controller
 	3 - criação da view
+
+	### OBS :
+	Na view de criação, definir a propriedade "name" dos campos com o mesmo nome da coluna no banco
+	Isso facilita no momento de criação, pois apenas um $request->all() já da certo e não precisa ficar
+	mapeando o nome dos campos da página com o nome das colunas no banco 
 	
+#12 - Inserir Registro (e mass assignment)
+	$request->body
+	$request->get('body')
+	$request->get('body','valor default')
 
-
-
-
+	No Model, precisamos definir um array com as colunas que são permitidas (mass assignment)
+	protected $fillable = ['subject','body','status'];
 
 
 

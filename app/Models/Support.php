@@ -13,4 +13,10 @@ class Support extends Model
     Não é obrigatorio quando a tabela tem o mesmo nome do Model, porem no plural
     */
     protected $table = 'supports';
+
+    protected $fillable = [
+        'subject',
+        'body',
+        'status'
+    ];
 }
