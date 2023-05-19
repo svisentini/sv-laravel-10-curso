@@ -108,9 +108,14 @@ Iniciar o repositorio no GIT
 	No Model, precisamos definir um array com as colunas que são permitidas (mass assignment)
 	protected $fillable = ['subject','body','status'];
 
+#13 - Exibir Detalhes do Registro
+	A rota "supports/create" tem que vir antes da "supports/{id}" para o Laravel
+	entender que "create" não é um "id".
 
-
-
+	Existem várias formas de recuperar um registro:
+	Support::find($id)  // Dessa forma, a busca é sempre pelo id da tabela
+	Support::where('id', $id)->first()  // Faz um where e recupera o primeiro registro
+	Support::where('id', '=', $id)->first()  // Faz um where com a condição "=" (que é default) e recupera o primeiro registro
 
 
 
