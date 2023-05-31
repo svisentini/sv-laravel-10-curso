@@ -45,5 +45,28 @@ class SupportController extends Controller{
         return redirect()->route('supports.index');
 
     }
+
+    public function edit(Support $support, string|int $id){
+        if(! $support = $support->where('id', '=', $id)->first()){
+            return back(); // Redireciona para a página anterior
+        }
+        return view ('admin/supports/edit', compact('support'));
+    }
+
+    public function update(Request $request, Support $support, string|int $id){
+        if(! $support = $support->where('id', '=', $id)->first()){
+            return back(); // Redireciona para a página anterior
+        }
+        
+        // $support->subject = $request->subject;
+        // $support->body = $request->body;
+        // $support->save();
+        
+        $support->update($request->only([
+            'subject', 'body'
+        ]));
+
+        return redirect()->route('supports.index');
+    }
     
 }

@@ -117,6 +117,14 @@ Iniciar o repositorio no GIT
 	Support::where('id', $id)->first()  // Faz um where e recupera o primeiro registro
 	Support::where('id', '=', $id)->first()  // Faz um where com a condição "=" (que é default) e recupera o primeiro registro
 
+#14 - Atualizar Registro
+	Outra forma de atualizar o registro
+	$support->subject = $request->subject;
+	$support->body = $request->body;
+	$support->save();
+    
+	@method('put')     no html
+
 
 
 
