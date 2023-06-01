@@ -129,7 +129,15 @@ Iniciar o repositorio no GIT
 	@csrf() 	>> Para enviar o token 
 	@method('DELETE')  >> No arquivo blade.php 
 
+#16 - Validações do jeito certo
+	O mais correto é criar uma classe para as validações e não fazer no Controller.
+	docker-compose exec app bash >> Abrir um bash dentro do container app
+	php artisan make:request StoreUpdateSupport  >> Sera criado dentro de app/Http uma nova pasta chamada "Requests"
+	Dentro de "rules" definimos as validações necessárias para os campos
 
+	unique:supports >> Indica que o subject não pode se repetir dentro da tabela supports
+	As validações podem ser separadas por "|" ou dentro de um array []
+	No Controller, trocar o "Request" pela classe "StoreUpdateSupport" criada.
 
 
 
