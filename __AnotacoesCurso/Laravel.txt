@@ -139,6 +139,14 @@ Iniciar o repositorio no GIT
 	As validações podem ser separadas por "|" ou dentro de um array []
 	No Controller, trocar o "Request" pela classe "StoreUpdateSupport" criada.
 
+#17 - Validar valor único no Update
+	if($this->method() === 'PUT')
+	Rule::unique('supports')->ignore($this-id)     >> É uma excessão, coluna é unica na tabela supports, ignorando o "id" atual.
+
+	No Controller
+	$data = $request->validated(); // Para pegar apenas os dados que foram validados.
+
+
 
 
 

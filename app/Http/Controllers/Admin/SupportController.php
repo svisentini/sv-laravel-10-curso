@@ -37,7 +37,7 @@ class SupportController extends Controller{
         // dd($request->all()); 
         // dd($request->get('body1','valor default'));
 
-        $data = $request->all();
+        $data = $request->validated(); // Para pegar apenas os dados que foram validados.
         $data['status'] = 'a';
 
         $support->create($data);
@@ -54,7 +54,7 @@ class SupportController extends Controller{
         return view ('admin/supports/edit', compact('support'));
     }
 
-    public function update(Request $request, Support $support, string|int $id){
+    public function update(StoreUpdateSupport $request, Support $support, string|int $id){
         if(! $support = $support->where('id', '=', $id)->first()){
             return back(); // Redireciona para a página anterior
         }
